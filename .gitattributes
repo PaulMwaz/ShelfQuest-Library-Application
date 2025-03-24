@@ -1,0 +1,10 @@
+# Handle line endings automatically for files detected as text
+* text=auto
+
+# Force LF line endings for JavaScript, Python, HTML, and CSS files
+*.js text eol=lf
+*.py text eol=lf
+*.html text eol=lf
+*.css text eol=lf
+*.md text eol=lf
+*.sh text eol=lf
