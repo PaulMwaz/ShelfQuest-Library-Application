@@ -3,6 +3,7 @@
 A full-stack digital library application that allows users to browse, manage, and access books digitally. Built with **React (Frontend) and Flask (Backend)**, it integrates a database to store books, user data, and other related entities.
 
 ---
+![ShelfQuest Digital Library](https://i.postimg.cc/tC8XWfP4/Shelf-Quest.gif)
 
 ## 🚀 Features
 
@@ -44,9 +45,10 @@ ShelfQuest-Digital-Library-Application/ │── client/ # Frontend (React) │
 ### 1️⃣ Backend Setup (Flask)
 ```sh
 cd server
-pipenv install flask
+pipenv --python 3.11 #If you don't have python 3.12 installed
+pipenv install
 pipenv shell
-flask run
+flask run.py
 ```
 
 > The Flask server should now be running.
