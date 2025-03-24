@@ -1,0 +1,431 @@
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background-color: #f4f4f4;
+}
+
+.navbar {
+  background-color: #1f2937;
+  padding: 5px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  height: 50px;
+}
+
+.navbar .logo {
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.nav_links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  margin-left: auto;
+  margin-right: 20px;
+}
+
+.nav_links li a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  padding: 8px 12px;
+  transition: background-color 0.3s ease;
+}
+
+.nav_links li a:hover {
+  background-color: #2563eb;
+  border-radius: 6px;
+}
+
+.menu-icon {
+  display: none;
+  font-size: 30px;
+  color: white;
+  cursor: pointer;
+  margin-right: 20px;
+}
+
+.content {
+  margin-top: 50px;
+  margin-bottom: 40px;
+  padding: 20px;
+}
+
+.home_content {
+  margin: 0 auto;
+  text-align: center;
+  max-width: 800px;
+}
+
+.slideshow-container {
+  max-width: 800px;
+  margin: 20px auto;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.slide img {
+  width: 100%;
+  display: block;
+  border-radius: 8px;
+}
+
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+footer {
+  background-color: #1f2937;
+  color: white;
+  text-align: center;
+  padding: 5px 0;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 40px;
+}
+
+.book-card {
+  background-color: #e5e7eb;
+  padding: 15px;
+  margin: 10px 0;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.book-card h3,
+.book-card p {
+  margin: 5px 0;
+}
+
+.book-card a {
+  color: #2563eb;
+  text-decoration: none;
+  margin: 5px;
+}
+
+.book-card a:hover {
+  color: #1d4ed8;
+}
+
+.login_box,
+.register_box {
+  background-color: #1f2937;
+  padding: 40px 50px;
+  border-radius: 12px;
+  text-align: center;
+  max-width: 400px;
+  margin: 50px auto;
+}
+
+.login_box h2,
+.register_box h2 {
+  color: white;
+}
+
+.input_group input {
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 8px;
+  background-color: #333;
+  color: white;
+}
+
+.input_group button {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 8px;
+  background-color: #2563eb;
+  color: white;
+  cursor: pointer;
+}
+
+.input_group button:hover {
+  background-color: #1d4ed8;
+}
+
+.about_content {
+  margin: 20px auto;
+  background-color: white;
+  padding: 30px;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 600px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.about_image_container {
+  margin: 20px auto;
+  max-width: 400px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.about_image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.about_text {
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+  margin: 20px auto;
+  line-height: 1.6;
+  max-width: 500px;
+  font-family: "Poppins", sans-serif;
+}
+
+@media (max-width: 768px) {
+  .nav_links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 40px;
+    right: 10px;
+    background-color: #1f2937;
+    width: auto;
+    padding: 10px 0;
+    gap: 5px;
+    border-radius: 8px;
+  }
+
+  .nav_links.active {
+    display: flex;
+  }
+
+  .menu-icon {
+    display: block;
+  }
+
+  .nav_links li a {
+    font-size: 18px;
+    padding: 12px 20px;
+    text-align: right;
+    margin: 5px 10px;
+    background-color: transparent;
+  }
+
+  .nav_links li a:hover {
+    background-color: #2563eb;
+    border-radius: 4px;
+  }
+
+  .nav_links li a:active {
+    background-color: #2563eb;
+  }
+
+  .nav_links li {
+    margin: 5px 0;
+  }
+
+  .home_content,
+  .about_content,
+  .events_content,
+  .register_content,
+  .login_content,
+  .books_content {
+    width: 90%;
+    padding: 15px;
+  }
+
+  .login_box,
+  .register_box {
+    padding: 30px;
+    margin-top: 50px;
+  }
+}
+
+/* 📚 Library Page Styling */
+.library_wrapper {
+  text-align: center;
+  padding: 20px;
+}
+
+/* 🏛️ Book Container */
+#booksContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+/* 📖 Book Card */
+.book-card {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.2s ease-in-out;
+}
+
+.book-card:hover {
+  transform: scale(1.05);
+}
+
+/* 📚 Book Title */
+.book-card h3 {
+  color: #1f2937;
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+/* ✍️ Author */
+.book-card p {
+  color: #4b5563;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+/* 📖 Read Book Button */
+.book-card a {
+  display: block;
+  background-color: #2563eb;
+  color: white;
+  padding: 8px 12px;
+  margin: 10px auto;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 14px;
+  transition: background 0.3s;
+}
+
+.book-card a:hover {
+  background-color: #1e40af;
+}
+
+/* 🔘 Buttons (Edit, Delete, Review) */
+.book-card button {
+  background-color: #4b5563;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  margin: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.book-card button:hover {
+  background-color: #374151;
+}
+
+/* 🗑️ Delete Button */
+.book-card button:nth-child(3) {
+  background-color: #dc2626;
+}
+
+.book-card button:nth-child(3):hover {
+  background-color: #b91c1c;
+}
+
+/* ✏️ Edit Button */
+.book-card button:nth-child(2) {
+  background-color: #f59e0b;
+}
+
+.book-card button:nth-child(2):hover {
+  background-color: #d97706;
+}
+
+/* 💬 Review Button */
+.book-card button:nth-child(4) {
+  background-color: #10b981;
+}
+
+.book-card button:nth-child(4):hover {
+  background-color: #059669;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+  background-color: white;
+  padding: 20px;
+  margin: 10% auto;
+  width: 40%;
+  text-align: center;
+  border-radius: 8px;
+}
+
+.close-btn {
+  float: right;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.modal input, .modal textarea {
+  width: 90%;
+  margin: 10px;
+  padding: 10px;
+}
+
+.modal button {
+  padding: 10px;
+  margin: 10px;
+  border: none;
+  background-color: #2563eb;
+  color: white;
+  cursor: pointer;
+}
+
+.modal button:hover {
+  background-color: #1e40af;
+}
+
+/* 👍👎 Thumbs-up and Thumbs-down buttons */
+.thumbs-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.thumbs-container button {
+  font-size: 24px;
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+  padding: 5px;
+}
+
+#thumbs-up {
+  color: #10b981;
+}
+
+#thumbs-down {
+  color: #dc2626;
+}
